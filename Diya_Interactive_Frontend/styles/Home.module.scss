@@ -1,0 +1,65 @@
+@import './variable.scss';
+
+.footer{
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+}
+.header{
+  position: fixed;
+   top: 0;
+   width: 100%;
+}
+
+.container {  
+  font-family: 'monospace';
+  height: calc(100vh - 25vh);
+
+  .main {
+    min-height:100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $black-color;
+
+    .title {
+      margin: 0;
+      line-height: 1.15;
+      font-size: 3.9rem;
+      text-align: center;
+      font-weight: 700;       
+      letter-spacing: .1rem;
+
+      span {
+        color: $blue-color;
+      }
+    }
+
+    .link {
+      padding: 1.7rem;
+      border-radius: $border-radius;
+      background-color: $theme-color;
+      color: $white-color;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    padding: 0 2rem;
+    .main{
+      .title {
+        font-size: 2rem;
+      }
+        .link {
+          padding: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
